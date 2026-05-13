@@ -230,12 +230,20 @@ a { color: inherit; text-decoration: none; }
   animation: fadeUp 0.8s 0.1s ease both;
 }
 
+.hero__logo {
+  width: 220px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
+  animation: fadeUp 0.8s ease both;
+}
+
 .hero__tagline {
   font-size: var(--text-lg);
   font-weight: 300;
   color: var(--text-secondary);
   margin-bottom: 2.5rem;
-  animation: fadeUp 0.8s 0.2s ease both;
+  animation: fadeUp 0.8s 0.1s ease both;
 }
 
 .btn-ghost {
