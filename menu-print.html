@@ -43,28 +43,28 @@
       background: var(--bg);
       color: var(--text);
       font-family: var(--sans);
-      font-size: 7.5pt;
-      line-height: 1.45;
+      font-size: 7pt;
+      line-height: 1.35;
     }
 
     /* ─── HEADER ─── */
     .print-header {
       text-align: center;
-      padding-bottom: 4mm;
-      margin-bottom: 4mm;
+      padding-bottom: 2.5mm;
+      margin-bottom: 2.5mm;
       border-bottom: 0.4mm solid var(--gold-dim);
     }
 
     .print-header__logo {
       display: block;
-      width: 22mm;
+      width: 16mm;
       height: auto;
-      margin: 0 auto 2mm;
+      margin: 0 auto 1.5mm;
     }
 
     .print-header__name {
       font-family: var(--serif);
-      font-size: 20pt;
+      font-size: 17pt;
       font-weight: 300;
       letter-spacing: 0.25em;
       text-transform: uppercase;
@@ -73,55 +73,54 @@
     }
 
     .print-header__tagline {
-      font-size: 6.5pt;
+      font-size: 5.5pt;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--faint);
-      margin-top: 1mm;
+      margin-top: 0.8mm;
     }
 
     .gold-line {
-      width: 24mm;
+      width: 20mm;
       height: 0.3mm;
       background: var(--gold-dim);
-      margin: 2mm auto 0;
+      margin: 1.5mm auto 0;
     }
 
     /* ─── 3-COLUMN GRID ─── */
     .print-body {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 3mm;
+      gap: 4mm;
       align-items: start;
     }
 
     /* ─── CATEGORY ─── */
     .cat-title {
       font-family: var(--serif);
-      font-size: 11pt;
+      font-size: 10pt;
       font-weight: 300;
       letter-spacing: 0.08em;
       color: var(--text);
-      padding-bottom: 1.5mm;
+      padding-bottom: 1mm;
       border-bottom: 0.3mm solid var(--gold-dim);
-      margin-bottom: 1.5mm;
+      margin-bottom: 1mm;
     }
 
     .cat-sub {
-      font-size: 5.5pt;
-      letter-spacing: 0.12em;
+      font-size: 5pt;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--faint);
-      margin-top: -1mm;
-      margin-bottom: 2mm;
+      margin-bottom: 1.5mm;
     }
 
     .group-title {
-      font-size: 5.5pt;
-      letter-spacing: 0.18em;
+      font-size: 5pt;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--gold-dim);
-      margin: 2.5mm 0 1mm;
+      margin: 2mm 0 0.8mm;
     }
 
     /* ─── ITEM ─── */
@@ -129,34 +128,34 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      padding: 1.2mm 0;
+      padding: 0.8mm 0;
       border-bottom: 0.2mm solid var(--divider);
-      gap: 2mm;
+      gap: 1.5mm;
     }
 
     .item:last-child { border-bottom: none; }
 
-    .item__left { flex: 1; }
+    .item__left { flex: 1; min-width: 0; }
 
     .item__name {
       display: block;
-      font-size: 7.5pt;
+      font-size: 7pt;
       color: var(--text);
       font-weight: 400;
-      line-height: 1.3;
+      line-height: 1.25;
     }
 
     .item__desc {
       display: block;
-      font-size: 6pt;
+      font-size: 5.5pt;
       color: var(--muted);
       font-weight: 300;
-      margin-top: 0.3mm;
-      line-height: 1.3;
+      margin-top: 0.2mm;
+      line-height: 1.25;
     }
 
     .item__price {
-      font-size: 7pt;
+      font-size: 6.5pt;
       color: var(--gold);
       white-space: nowrap;
       font-weight: 400;
@@ -165,11 +164,11 @@
 
     /* ─── FOOTER ─── */
     .print-footer {
-      margin-top: 4mm;
-      padding-top: 3mm;
+      margin-top: 3mm;
+      padding-top: 2mm;
       border-top: 0.3mm solid var(--divider);
       text-align: center;
-      font-size: 5.5pt;
+      font-size: 5pt;
       color: var(--faint);
       letter-spacing: 0.1em;
     }
