@@ -40,8 +40,35 @@
     link.addEventListener('click', closeNav);
   });
 
+
+  // ─── Galerie Lightbox ───
+  const lightbox     = document.getElementById('lightbox');
+  const lightboxImg  = lightbox ? lightbox.querySelector('.lightbox__img') : null;
+  const lightboxClose = lightbox ? lightbox.querySelector('.lightbox__close') : null;
+
+  document.querySelectorAll('.gallery-item[data-src]').forEach(function (item) {
+    item.addEventListener('click', function () {
+      lightboxImg.src = item.dataset.src;
+      lightboxImg.alt = item.querySelector('img').alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    lightboxImg.src = '';
+  }
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeNav();
+    if (e.key === 'Escape') { closeNav(); closeLightbox(); }
   });
 
   // ─── Scroll reveal ───
