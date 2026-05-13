@@ -11,9 +11,12 @@
 
     @page { size: A4 portrait; margin: 0; }
 
-    body {
+    html, body {
       width: 794px;
       height: 1123px;
+    }
+
+    body {
       overflow: hidden;
       background: #0D0D0D;
       color: #F0EAE0;
@@ -22,16 +25,24 @@
       print-color-adjust: exact;
     }
 
-    /* ── SCREEN: zentriert + Schatten ── */
     @media screen {
-      html { background: #333; min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 24px 0; }
+      html {
+        background: #2A2A2A;
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 32px 0;
+        width: auto;
+        height: auto;
+      }
     }
 
     /* ── SEITE ── */
     .page {
       width: 794px;
       height: 1123px;
-      padding: 36px 40px 28px;
+      padding: 28px 36px 20px;
       display: flex;
       flex-direction: column;
     }
@@ -39,22 +50,22 @@
     /* ── HEADER ── */
     .hdr {
       text-align: center;
-      padding-bottom: 12px;
-      margin-bottom: 12px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
       border-bottom: 1px solid #8A6A2A;
       flex-shrink: 0;
     }
 
     .hdr img {
-      width: 52px;
+      width: 44px;
       height: auto;
       display: block;
-      margin: 0 auto 6px;
+      margin: 0 auto 5px;
     }
 
     .hdr__name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 26px;
+      font-size: 22px;
       font-weight: 300;
       letter-spacing: 0.3em;
       text-transform: uppercase;
@@ -63,56 +74,58 @@
     }
 
     .hdr__sub {
-      font-size: 8px;
-      letter-spacing: 0.22em;
+      font-size: 7px;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: #5C574F;
-      margin-top: 4px;
+      margin-top: 3px;
     }
 
     /* ── 2-SPALTEN ── */
     .cols {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 28px;
+      gap: 24px;
       flex: 1;
       min-height: 0;
+      overflow: hidden;
     }
 
-    .col { display: flex; flex-direction: column; gap: 0; }
+    .col {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
 
     /* ── KATEGORIE ── */
-    .cat {
-      margin-bottom: 8px;
-    }
-
-    .cat + .cat { margin-top: 14px; }
+    .cat { flex-shrink: 0; }
+    .cat + .cat { margin-top: 10px; }
 
     .cat__title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 400;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       color: #F0EAE0;
-      padding-bottom: 5px;
+      padding-bottom: 4px;
       border-bottom: 1px solid #8A6A2A;
       margin-bottom: 2px;
     }
 
     .cat__sub {
-      font-size: 7px;
-      letter-spacing: 0.14em;
+      font-size: 6.5px;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
       color: #5C574F;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .group-lbl {
-      font-size: 7px;
-      letter-spacing: 0.18em;
+      font-size: 6.5px;
+      letter-spacing: 0.17em;
       text-transform: uppercase;
       color: #8A6A2A;
-      margin: 8px 0 4px;
+      margin: 6px 0 3px;
     }
 
     /* ── ITEM ── */
@@ -120,51 +133,47 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      padding: 3.5px 0;
+      padding: 2.5px 0;
       border-bottom: 1px solid #1E1C18;
-      gap: 8px;
+      gap: 6px;
     }
 
     .item:last-child { border-bottom: none; }
 
+    .item__left { flex: 1; min-width: 0; }
+
     .item__name {
-      font-size: 8.5px;
+      font-size: 8px;
       color: #F0EAE0;
       font-weight: 400;
-      line-height: 1.3;
+      line-height: 1.25;
     }
 
     .item__desc {
-      font-size: 7px;
+      font-size: 6.5px;
       color: #9C9488;
       font-weight: 300;
-      line-height: 1.3;
+      line-height: 1.25;
       margin-top: 1px;
     }
 
     .item__price {
-      font-size: 8px;
+      font-size: 7.5px;
       color: #C9A84C;
       white-space: nowrap;
       flex-shrink: 0;
     }
 
-    /* ── TRENNLINIE ── */
-    .divider {
-      border: none;
-      border-top: 1px solid #1E1C18;
-      margin: 12px 0;
-    }
-
     /* ── FOOTER ── */
     .ftr {
       text-align: center;
-      font-size: 7px;
+      font-size: 6.5px;
       color: #5C574F;
       letter-spacing: 0.12em;
-      padding-top: 10px;
+      padding-top: 8px;
       border-top: 1px solid #1E1C18;
       flex-shrink: 0;
+      margin-top: 8px;
     }
 
   </style>
@@ -189,22 +198,22 @@
         <div class="cat__title">Shisha</div>
         <div class="cat__sub">Frisch zubereitet &middot; Einwegmundstücke</div>
 
-        <div class="item"><div><div class="item__name">Doppel Apfel</div><div class="item__desc">Al Fakher &middot; Kräftige Anisnote &middot; Lang anhaltend</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Doppel Apfel Strong</div><div class="item__desc">Revoshi &middot; Dominante Anis-Würze &middot; Sehr intensiv</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Minze</div><div class="item__desc">Pur &middot; Frisch &middot; Einfach Minze</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Kaugummi Minze</div><div class="item__desc">Süßes Aroma &middot; Ausgeprägte Minze</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Blaubeere Minze</div><div class="item__desc">Süße Waldbeere &middot; Leicht herb &middot; Feine Minze</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Ice Peach</div><div class="item__desc">Intensiver Pfirsich &middot; Kühlende Ice-Note</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Ananas</div><div class="item__desc">Tropisch &middot; Süß &middot; Saftig</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Love 66</div><div class="item__desc">Süß &middot; Fruchtig &middot; Erfrischend</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Black Nana</div><div class="item__desc">Dunkle Traube &middot; Süß-fruchtig &middot; Minze</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">African Queen</div><div class="item__desc">Früchtemix &middot; Süß &middot; Tropisch</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Okolom Classic</div><div class="item__desc">Holunder &middot; Limette &middot; Ingwer</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Okolom White</div><div class="item__desc">Holunder &middot; Spritzige Limette &middot; Kokos</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Falim Red</div><div class="item__desc">Falim-Kaugummi &middot; Beerig &middot; Leicht herb</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Vampire Night</div><div class="item__desc">Blutorange &middot; Grapefruit &middot; Süß-säuerlich</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Black Box</div><div class="item__desc">Açaí &middot; Guarana &middot; Zitrone</div></div><div class="item__price">€ 14</div></div>
-        <div class="item"><div><div class="item__name">Shisha Wechselkopf</div></div><div class="item__price">€ 10</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Doppel Apfel</div><div class="item__desc">Al Fakher &middot; Kräftige Anisnote &middot; Lang anhaltend</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Doppel Apfel Strong</div><div class="item__desc">Revoshi &middot; Dominante Anis-Würze &middot; Sehr intensiv</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Minze</div><div class="item__desc">Pur &middot; Frisch &middot; Einfach Minze</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Kaugummi Minze</div><div class="item__desc">Süßes Aroma &middot; Ausgeprägte Minze</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Blaubeere Minze</div><div class="item__desc">Süße Waldbeere &middot; Leicht herb &middot; Feine Minze</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Ice Peach</div><div class="item__desc">Intensiver Pfirsich &middot; Kühlende Ice-Note</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Ananas</div><div class="item__desc">Tropisch &middot; Süß &middot; Saftig</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Love 66</div><div class="item__desc">Süß &middot; Fruchtig &middot; Erfrischend</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Black Nana</div><div class="item__desc">Dunkle Traube &middot; Süß-fruchtig &middot; Minze</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">African Queen</div><div class="item__desc">Früchtemix &middot; Süß &middot; Tropisch</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Okolom Classic</div><div class="item__desc">Holunder &middot; Limette &middot; Ingwer</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Okolom White</div><div class="item__desc">Holunder &middot; Spritzige Limette &middot; Kokos</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Falim Red</div><div class="item__desc">Falim-Kaugummi &middot; Beerig &middot; Leicht herb</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Vampire Night</div><div class="item__desc">Blutorange &middot; Grapefruit &middot; Süß-säuerlich</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Black Box</div><div class="item__desc">Açaí &middot; Guarana &middot; Zitrone</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Shisha Wechselkopf</div></div><div class="item__price">€ 10</div></div>
       </div>
 
       <div class="cat">
@@ -212,15 +221,15 @@
         <div class="cat__sub">Alkoholfrei &middot; 0,5 l</div>
 
         <div class="group-lbl">Alkoholfreie Cocktails</div>
-        <div class="item"><div><div class="item__name">Tagescocktail</div><div class="item__desc">Jeden Tag neu &middot; Lass dich überraschen</div></div><div class="item__price">€ 6</div></div>
-        <div class="item"><div><div class="item__name">Ipanema</div><div class="item__desc">Limetten &middot; Rohrzucker &middot; Maracujasaft &middot; Ginger Ale</div></div><div class="item__price">€ 6</div></div>
-        <div class="item"><div><div class="item__name">Mojito</div><div class="item__desc">Limettensaft &middot; Rohrzucker &middot; Minze</div></div><div class="item__price">€ 6</div></div>
-        <div class="item"><div><div class="item__name">Coconut Dragon</div><div class="item__desc">Kokossaft &middot; Drachenfruchtsaft &middot; Frische Früchte &middot; Eiswürfel</div></div><div class="item__price">€ 6</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Tagescocktail</div><div class="item__desc">Jeden Tag neu &middot; Lass dich überraschen</div></div><div class="item__price">€ 6</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Ipanema</div><div class="item__desc">Limetten &middot; Rohrzucker &middot; Maracujasaft &middot; Ginger Ale</div></div><div class="item__price">€ 6</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Mojito</div><div class="item__desc">Limettensaft &middot; Rohrzucker &middot; Minze</div></div><div class="item__price">€ 6</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Coconut Dragon</div><div class="item__desc">Kokossaft &middot; Drachenfruchtsaft &middot; Frische Früchte</div></div><div class="item__price">€ 6</div></div>
 
         <div class="group-lbl">Milkshakes</div>
-        <div class="item"><div><div class="item__name">Vanille</div></div><div class="item__price">€ 5,50</div></div>
-        <div class="item"><div><div class="item__name">Erdbeere</div></div><div class="item__price">€ 5,50</div></div>
-        <div class="item"><div><div class="item__name">Schoko</div></div><div class="item__price">€ 5,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Vanille</div></div><div class="item__price">€ 5,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Erdbeere</div></div><div class="item__price">€ 5,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Schoko</div></div><div class="item__price">€ 5,50</div></div>
       </div>
 
     </div>
@@ -233,41 +242,39 @@
         <div class="cat__sub">Kalt &amp; Warm</div>
 
         <div class="group-lbl">Kühle Getränke</div>
-        <div class="item"><div><div class="item__name">Fritz Cola</div><div class="item__desc">Verschiedene Sorten &middot; 0,3 l</div></div><div class="item__price">€ 4</div></div>
-        <div class="item"><div><div class="item__name">Spezi</div><div class="item__desc">0,3 l</div></div><div class="item__price">€ 3,50</div></div>
-        <div class="item"><div><div class="item__name">Elephant Bay</div><div class="item__desc">Verschiedene Sorten &middot; 0,3 l</div></div><div class="item__price">€ 4</div></div>
-        <div class="item"><div><div class="item__name">Fanta Exotic</div><div class="item__desc">0,3 l</div></div><div class="item__price">€ 3,50</div></div>
-        <div class="item"><div><div class="item__name">Apfelschorle</div><div class="item__desc">0,3 l</div></div><div class="item__price">€ 4</div></div>
-        <div class="item"><div><div class="item__name">Stilles Wasser</div><div class="item__desc">0,3 l</div></div><div class="item__price">€ 3</div></div>
-        <div class="item"><div><div class="item__name">Mineralwasser</div><div class="item__desc">0,3 l</div></div><div class="item__price">€ 3</div></div>
-        <div class="item"><div><div class="item__name">Moloko</div><div class="item__desc">Verschiedene Sorten &middot; 0,2 l</div></div><div class="item__price">€ 3,50</div></div>
-        <div class="item"><div><div class="item__name">Red Bull</div><div class="item__desc">Verschiedene Sorten &middot; 0,2 l</div></div><div class="item__price">€ 3,50</div></div>
-        <div class="item"><div><div class="item__name">Eiskaffee</div><div class="item__desc">0,4 l</div></div><div class="item__price">€ 5</div></div>
-        <div class="item"><div><div class="item__name">Kiba</div><div class="item__desc">Kirsch &amp; Banane</div></div><div class="item__price">€ 5</div></div>
-        <div class="item"><div><div class="item__name">Churchill Soda</div><div class="item__desc">Zitrone &middot; Salz &middot; Eiswürfel &middot; Sprudelwasser</div></div><div class="item__price">€ 4</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Fritz Cola</div><div class="item__desc">Verschiedene Sorten &middot; 0,3 l</div></div><div class="item__price">€ 4</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Spezi &middot; 0,3 l</div></div><div class="item__price">€ 3,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Elephant Bay</div><div class="item__desc">Verschiedene Sorten &middot; 0,3 l</div></div><div class="item__price">€ 4</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Fanta Exotic &middot; 0,3 l</div></div><div class="item__price">€ 3,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Apfelschorle &middot; 0,3 l</div></div><div class="item__price">€ 4</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Stilles Wasser &middot; 0,3 l</div></div><div class="item__price">€ 3</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Mineralwasser &middot; 0,3 l</div></div><div class="item__price">€ 3</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Moloko</div><div class="item__desc">Verschiedene Sorten &middot; 0,2 l</div></div><div class="item__price">€ 3,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Red Bull</div><div class="item__desc">Verschiedene Sorten &middot; 0,2 l</div></div><div class="item__price">€ 3,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Eiskaffee &middot; 0,4 l</div></div><div class="item__price">€ 5</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Kiba</div><div class="item__desc">Kirsch &amp; Banane</div></div><div class="item__price">€ 5</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Churchill Soda</div><div class="item__desc">Zitrone &middot; Salz &middot; Eiswürfel &middot; Sprudelwasser</div></div><div class="item__price">€ 4</div></div>
 
         <div class="group-lbl">Warme Getränke</div>
-        <div class="item"><div><div class="item__name">Kaffee</div></div><div class="item__price">€ 3</div></div>
-        <div class="item"><div><div class="item__name">Espresso</div></div><div class="item__price">€ 2,50</div></div>
-        <div class="item"><div><div class="item__name">Cappuccino</div></div><div class="item__price">€ 3,50</div></div>
-        <div class="item"><div><div class="item__name">Milchkaffee</div></div><div class="item__price">€ 3,20</div></div>
-        <div class="item"><div><div class="item__name">Latte Macchiato</div></div><div class="item__price">€ 3,20</div></div>
-        <div class="item"><div><div class="item__name">Marokkanischer Tee</div><div class="item__desc">Kanne für 4 Personen</div></div><div class="item__price">€ 7</div></div>
-        <div class="item"><div><div class="item__name">Marokkanischer Tee</div><div class="item__desc">Kanne für 2 Personen</div></div><div class="item__price">€ 5</div></div>
-        <div class="item"><div><div class="item__name">Tee</div><div class="item__desc">Verschiedene Sorten</div></div><div class="item__price">€ 2,50</div></div>
-        <div class="item"><div><div class="item__name">+ Honig</div></div><div class="item__price">€ 1</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Kaffee</div></div><div class="item__price">€ 3</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Espresso</div></div><div class="item__price">€ 2,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Cappuccino</div></div><div class="item__price">€ 3,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Milchkaffee</div></div><div class="item__price">€ 3,20</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Latte Macchiato</div></div><div class="item__price">€ 3,20</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Marokkanischer Tee</div><div class="item__desc">Kanne für 4 Personen &middot; für 2 Personen € 5</div></div><div class="item__price">€ 7</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Tee</div><div class="item__desc">Verschiedene Sorten &middot; + Honig € 1</div></div><div class="item__price">€ 2,50</div></div>
       </div>
 
       <div class="cat">
         <div class="cat__title">Snacks</div>
         <div class="cat__sub">Knabbereien &amp; Mehr</div>
 
-        <div class="item"><div><div class="item__name">Nic Nacs</div></div><div class="item__price">€ 2</div></div>
-        <div class="item"><div><div class="item__name">Erdnüsse</div></div><div class="item__price">€ 2</div></div>
-        <div class="item"><div><div class="item__name">M&amp;Ms</div></div><div class="item__price">€ 2</div></div>
-        <div class="item"><div><div class="item__name">Maltesers</div></div><div class="item__price">€ 2</div></div>
-        <div class="item"><div><div class="item__name">Salzstangen</div></div><div class="item__price">€ 2,50</div></div>
-        <div class="item"><div><div class="item__name">Nachos</div><div class="item__desc">Inkl. 1 Dip (Salsa oder Käse) &middot; je weiterer Dip € 1,20</div></div><div class="item__price">€ 6</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Nic Nacs</div></div><div class="item__price">€ 2</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Erdnüsse</div></div><div class="item__price">€ 2</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">M&amp;Ms</div></div><div class="item__price">€ 2</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Maltesers</div></div><div class="item__price">€ 2</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Salzstangen</div></div><div class="item__price">€ 2,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Nachos</div><div class="item__desc">Inkl. 1 Dip (Salsa oder Käse) &middot; je weiterer Dip € 1,20</div></div><div class="item__price">€ 6</div></div>
       </div>
 
     </div>
