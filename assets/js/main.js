@@ -41,6 +41,33 @@
   });
 
 
+  // ─── Galerie Slider ───
+  const track    = document.querySelector('.gallery-track');
+  const items    = track ? Array.from(track.querySelectorAll('.gallery-item')) : [];
+  const btnPrev  = document.querySelector('.gallery-btn--prev');
+  const btnNext  = document.querySelector('.gallery-btn--next');
+  let current    = 0;
+
+  function goTo(index) {
+    current = (index + items.length) % items.length;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+  }
+
+  if (btnPrev) btnPrev.addEventListener('click', function () { goTo(current - 1); });
+  if (btnNext) btnNext.addEventListener('click', function () { goTo(current + 1); });
+
+  // Touch / Swipe
+  if (track) {
+    let startX = 0;
+    track.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+    }, { passive: true });
+  }
+
   // ─── Galerie Lightbox ───
   const lightbox     = document.getElementById('lightbox');
   const lightboxImg  = lightbox ? lightbox.querySelector('.lightbox__img') : null;
