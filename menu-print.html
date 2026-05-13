@@ -42,7 +42,7 @@
     .page {
       width: 794px;
       height: 1123px;
-      padding: 28px 36px 20px;
+      padding: 26px 32px 18px;
       display: flex;
       flex-direction: column;
     }
@@ -50,14 +50,14 @@
     /* ── HEADER ── */
     .hdr {
       text-align: center;
-      padding-bottom: 10px;
+      padding-bottom: 9px;
       margin-bottom: 10px;
       border-bottom: 1px solid #8A6A2A;
       flex-shrink: 0;
     }
 
     .hdr img {
-      width: 44px;
+      width: 42px;
       height: auto;
       display: block;
       margin: 0 auto 5px;
@@ -65,7 +65,7 @@
 
     .hdr__name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 300;
       letter-spacing: 0.3em;
       text-transform: uppercase;
@@ -74,18 +74,18 @@
     }
 
     .hdr__sub {
-      font-size: 7px;
+      font-size: 6.5px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: #5C574F;
       margin-top: 3px;
     }
 
-    /* ── 2-SPALTEN ── */
+    /* ── 3-SPALTEN ── */
     .cols {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 18px;
       flex: 1;
       min-height: 0;
       overflow: hidden;
@@ -113,16 +113,16 @@
     }
 
     .cat__sub {
-      font-size: 6.5px;
-      letter-spacing: 0.13em;
+      font-size: 6px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #5C574F;
       margin-bottom: 4px;
     }
 
     .group-lbl {
-      font-size: 6.5px;
-      letter-spacing: 0.17em;
+      font-size: 6px;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: #8A6A2A;
       margin: 6px 0 3px;
@@ -135,7 +135,7 @@
       align-items: baseline;
       padding: 2.5px 0;
       border-bottom: 1px solid #1E1C18;
-      gap: 6px;
+      gap: 5px;
     }
 
     .item:last-child { border-bottom: none; }
@@ -143,14 +143,14 @@
     .item__left { flex: 1; min-width: 0; }
 
     .item__name {
-      font-size: 8px;
+      font-size: 7.5px;
       color: #F0EAE0;
       font-weight: 400;
       line-height: 1.25;
     }
 
     .item__desc {
-      font-size: 6.5px;
+      font-size: 6px;
       color: #9C9488;
       font-weight: 300;
       line-height: 1.25;
@@ -158,7 +158,7 @@
     }
 
     .item__price {
-      font-size: 7.5px;
+      font-size: 7px;
       color: #C9A84C;
       white-space: nowrap;
       flex-shrink: 0;
@@ -167,10 +167,10 @@
     /* ── FOOTER ── */
     .ftr {
       text-align: center;
-      font-size: 6.5px;
+      font-size: 6px;
       color: #5C574F;
       letter-spacing: 0.12em;
-      padding-top: 8px;
+      padding-top: 7px;
       border-top: 1px solid #1E1C18;
       flex-shrink: 0;
       margin-top: 8px;
@@ -188,12 +188,11 @@
     <div class="hdr__sub">Shisha Bar &middot; Kleikstraße 24, Herzogenrath &middot; Since 2012</div>
   </header>
 
-  <!-- SPALTEN -->
+  <!-- 3 SPALTEN -->
   <div class="cols">
 
-    <!-- ── LINKS: SHISHA + COCKTAILS & SHAKES ── -->
+    <!-- ── SPALTE 1: SHISHA ── -->
     <div class="col">
-
       <div class="cat">
         <div class="cat__title">Shisha</div>
         <div class="cat__sub">Frisch zubereitet &middot; Einwegmundstücke</div>
@@ -215,28 +214,10 @@
         <div class="item"><div class="item__left"><div class="item__name">Black Box</div><div class="item__desc">Açaí &middot; Guarana &middot; Zitrone</div></div><div class="item__price">€ 14</div></div>
         <div class="item"><div class="item__left"><div class="item__name">Shisha Wechselkopf</div></div><div class="item__price">€ 10</div></div>
       </div>
-
-      <div class="cat">
-        <div class="cat__title">Cocktails &amp; Shakes</div>
-        <div class="cat__sub">Alkoholfrei &middot; 0,5 l</div>
-
-        <div class="group-lbl">Alkoholfreie Cocktails</div>
-        <div class="item"><div class="item__left"><div class="item__name">Tagescocktail</div><div class="item__desc">Jeden Tag neu &middot; Lass dich überraschen</div></div><div class="item__price">€ 6</div></div>
-        <div class="item"><div class="item__left"><div class="item__name">Ipanema</div><div class="item__desc">Limetten &middot; Rohrzucker &middot; Maracujasaft &middot; Ginger Ale</div></div><div class="item__price">€ 6</div></div>
-        <div class="item"><div class="item__left"><div class="item__name">Mojito</div><div class="item__desc">Limettensaft &middot; Rohrzucker &middot; Minze</div></div><div class="item__price">€ 6</div></div>
-        <div class="item"><div class="item__left"><div class="item__name">Coconut Dragon</div><div class="item__desc">Kokossaft &middot; Drachenfruchtsaft &middot; Frische Früchte</div></div><div class="item__price">€ 6</div></div>
-
-        <div class="group-lbl">Milkshakes</div>
-        <div class="item"><div class="item__left"><div class="item__name">Vanille</div></div><div class="item__price">€ 5,50</div></div>
-        <div class="item"><div class="item__left"><div class="item__name">Erdbeere</div></div><div class="item__price">€ 5,50</div></div>
-        <div class="item"><div class="item__left"><div class="item__name">Schoko</div></div><div class="item__price">€ 5,50</div></div>
-      </div>
-
     </div>
 
-    <!-- ── RECHTS: GETRÄNKE + SNACKS ── -->
+    <!-- ── SPALTE 2: GETRÄNKE ── -->
     <div class="col">
-
       <div class="cat">
         <div class="cat__title">Getränke</div>
         <div class="cat__sub">Kalt &amp; Warm</div>
@@ -264,6 +245,25 @@
         <div class="item"><div class="item__left"><div class="item__name">Marokkanischer Tee</div><div class="item__desc">Kanne für 4 Personen &middot; für 2 Personen € 5</div></div><div class="item__price">€ 7</div></div>
         <div class="item"><div class="item__left"><div class="item__name">Tee</div><div class="item__desc">Verschiedene Sorten &middot; + Honig € 1</div></div><div class="item__price">€ 2,50</div></div>
       </div>
+    </div>
+
+    <!-- ── SPALTE 3: COCKTAILS & SHAKES + SNACKS ── -->
+    <div class="col">
+      <div class="cat">
+        <div class="cat__title">Cocktails &amp; Shakes</div>
+        <div class="cat__sub">Alkoholfrei &middot; 0,5 l</div>
+
+        <div class="group-lbl">Alkoholfreie Cocktails</div>
+        <div class="item"><div class="item__left"><div class="item__name">Tagescocktail</div><div class="item__desc">Jeden Tag neu &middot; Lass dich überraschen</div></div><div class="item__price">€ 6</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Ipanema</div><div class="item__desc">Limetten &middot; Rohrzucker &middot; Maracujasaft &middot; Ginger Ale</div></div><div class="item__price">€ 6</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Mojito</div><div class="item__desc">Limettensaft &middot; Rohrzucker &middot; Minze</div></div><div class="item__price">€ 6</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Coconut Dragon</div><div class="item__desc">Kokossaft &middot; Drachenfruchtsaft &middot; Frische Früchte</div></div><div class="item__price">€ 6</div></div>
+
+        <div class="group-lbl">Milkshakes</div>
+        <div class="item"><div class="item__left"><div class="item__name">Vanille</div></div><div class="item__price">€ 5,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Erdbeere</div></div><div class="item__price">€ 5,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Schoko</div></div><div class="item__price">€ 5,50</div></div>
+      </div>
 
       <div class="cat">
         <div class="cat__title">Snacks</div>
@@ -276,8 +276,8 @@
         <div class="item"><div class="item__left"><div class="item__name">Salzstangen</div></div><div class="item__price">€ 2,50</div></div>
         <div class="item"><div class="item__left"><div class="item__name">Nachos</div><div class="item__desc">Inkl. 1 Dip (Salsa oder Käse) &middot; je weiterer Dip € 1,20</div></div><div class="item__price">€ 6</div></div>
       </div>
-
     </div>
+
   </div>
 
   <!-- FOOTER -->
