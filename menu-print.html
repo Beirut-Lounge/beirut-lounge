@@ -87,11 +87,11 @@
       margin: 1.5mm auto 0;
     }
 
-    /* ─── 3-COLUMN GRID ─── */
+    /* ─── 2-COLUMN GRID ─── */
     .print-body {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 4mm;
+      grid-template-columns: 1fr 1fr;
+      gap: 6mm;
       align-items: start;
     }
 
@@ -194,10 +194,10 @@
     <div class="gold-line"></div>
   </header>
 
-  <!-- CONTENT: 3 SPALTEN -->
+  <!-- CONTENT: 2 SPALTEN -->
   <div class="print-body">
 
-    <!-- ── SPALTE 1: SHISHA ── -->
+    <!-- ── SPALTE 1: SHISHA + COCKTAILS & SHAKES ── -->
     <div>
       <h2 class="cat-title">Shisha</h2>
       <p class="cat-sub">Frisch zubereitet &middot; Einwegmundstücke</p>
@@ -315,7 +315,55 @@
       </div>
     </div>
 
-    <!-- ── SPALTE 2: GETRÄNKE ── -->
+      <h2 class="cat-title" style="margin-top: 4mm;">Cocktails &amp; Shakes</h2>
+      <p class="cat-sub">Alkoholfrei &middot; Frisch zubereitet &middot; 0,5 l</p>
+
+      <p class="group-title">Alkoholfreie Cocktails</p>
+      <div class="item">
+        <div class="item__left">
+          <span class="item__name">Tagescocktail</span>
+          <span class="item__desc">Jeden Tag neu &middot; Lass dich überraschen</span>
+        </div>
+        <span class="item__price">€ 6</span>
+      </div>
+      <div class="item">
+        <div class="item__left">
+          <span class="item__name">Ipanema</span>
+          <span class="item__desc">Limetten &middot; Rohrzucker &middot; Maracujasaft &middot; Ginger Ale</span>
+        </div>
+        <span class="item__price">€ 6</span>
+      </div>
+      <div class="item">
+        <div class="item__left">
+          <span class="item__name">Mojito</span>
+          <span class="item__desc">Limettensaft &middot; Rohrzucker &middot; Minze</span>
+        </div>
+        <span class="item__price">€ 6</span>
+      </div>
+      <div class="item">
+        <div class="item__left">
+          <span class="item__name">Coconut Dragon</span>
+          <span class="item__desc">Kokossaft &middot; Drachenfruchtsaft &middot; Frische Früchte &middot; Eiswürfel</span>
+        </div>
+        <span class="item__price">€ 6</span>
+      </div>
+
+      <p class="group-title">Milkshakes</p>
+      <div class="item">
+        <div class="item__left"><span class="item__name">Vanille</span></div>
+        <span class="item__price">€ 5,50</span>
+      </div>
+      <div class="item">
+        <div class="item__left"><span class="item__name">Erdbeere</span></div>
+        <span class="item__price">€ 5,50</span>
+      </div>
+      <div class="item">
+        <div class="item__left"><span class="item__name">Schoko</span></div>
+        <span class="item__price">€ 5,50</span>
+      </div>
+    </div>
+
+    <!-- ── SPALTE 2: GETRÄNKE + SNACKS ── -->
     <div>
       <h2 class="cat-title">Getränke</h2>
       <p class="cat-sub">Kalt &amp; Warm</p>
@@ -453,55 +501,6 @@
         <span class="item__price">€ 1</span>
       </div>
     </div>
-
-    <!-- ── SPALTE 3: COCKTAILS + SHAKES + SNACKS ── -->
-    <div>
-      <h2 class="cat-title">Cocktails &amp; Shakes</h2>
-      <p class="cat-sub">Alkoholfrei &middot; Frisch zubereitet &middot; 0,5 l</p>
-
-      <p class="group-title">Alkoholfreie Cocktails</p>
-      <div class="item">
-        <div class="item__left">
-          <span class="item__name">Tagescocktail</span>
-          <span class="item__desc">Jeden Tag neu &middot; Lass dich überraschen</span>
-        </div>
-        <span class="item__price">€ 6</span>
-      </div>
-      <div class="item">
-        <div class="item__left">
-          <span class="item__name">Ipanema</span>
-          <span class="item__desc">Limetten &middot; Rohrzucker &middot; Maracujasaft &middot; Ginger Ale</span>
-        </div>
-        <span class="item__price">€ 6</span>
-      </div>
-      <div class="item">
-        <div class="item__left">
-          <span class="item__name">Mojito</span>
-          <span class="item__desc">Limettensaft &middot; Rohrzucker &middot; Minze</span>
-        </div>
-        <span class="item__price">€ 6</span>
-      </div>
-      <div class="item">
-        <div class="item__left">
-          <span class="item__name">Coconut Dragon</span>
-          <span class="item__desc">Kokossaft &middot; Drachenfruchtsaft &middot; Frische Früchte &middot; Eiswürfel</span>
-        </div>
-        <span class="item__price">€ 6</span>
-      </div>
-
-      <p class="group-title">Milkshakes</p>
-      <div class="item">
-        <div class="item__left"><span class="item__name">Vanille</span></div>
-        <span class="item__price">€ 5,50</span>
-      </div>
-      <div class="item">
-        <div class="item__left"><span class="item__name">Erdbeere</span></div>
-        <span class="item__price">€ 5,50</span>
-      </div>
-      <div class="item">
-        <div class="item__left"><span class="item__name">Schoko</span></div>
-        <span class="item__price">€ 5,50</span>
-      </div>
 
       <h2 class="cat-title" style="margin-top: 4mm;">Snacks</h2>
       <p class="cat-sub">Knabbereien &amp; Mehr</p>
