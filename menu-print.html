@@ -6,7 +6,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
 
-    /* A4 bei 96dpi = 794 × 1123px */
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     @page { size: A4 portrait; margin: 0; }
@@ -38,11 +37,10 @@
       }
     }
 
-    /* ── SEITE ── */
     .page {
       width: 794px;
       height: 1123px;
-      padding: 26px 32px 18px;
+      padding: 34px 40px 28px;
       display: flex;
       flex-direction: column;
     }
@@ -50,22 +48,22 @@
     /* ── HEADER ── */
     .hdr {
       text-align: center;
-      padding-bottom: 9px;
-      margin-bottom: 10px;
+      padding-bottom: 15px;
+      margin-bottom: 16px;
       border-bottom: 1px solid #8A6A2A;
       flex-shrink: 0;
     }
 
     .hdr img {
-      width: 42px;
+      width: 58px;
       height: auto;
       display: block;
-      margin: 0 auto 5px;
+      margin: 0 auto 6px;
     }
 
     .hdr__name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 21px;
+      font-size: 28px;
       font-weight: 300;
       letter-spacing: 0.3em;
       text-transform: uppercase;
@@ -74,18 +72,18 @@
     }
 
     .hdr__sub {
-      font-size: 6.5px;
+      font-size: 8px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: #5C574F;
-      margin-top: 3px;
+      margin-top: 5px;
     }
 
     /* ── 3-SPALTEN ── */
     .cols {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 18px;
+      gap: 22px;
       flex: 1;
       min-height: 0;
       overflow: hidden;
@@ -99,33 +97,33 @@
 
     /* ── KATEGORIE ── */
     .cat { flex-shrink: 0; }
-    .cat + .cat { margin-top: 10px; }
+    .cat + .cat { margin-top: 20px; }
 
     .cat__title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 13px;
+      font-size: 17px;
       font-weight: 400;
       letter-spacing: 0.08em;
       color: #F0EAE0;
-      padding-bottom: 4px;
+      padding-bottom: 6px;
       border-bottom: 1px solid #8A6A2A;
       margin-bottom: 2px;
     }
 
     .cat__sub {
-      font-size: 6px;
+      font-size: 8px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #5C574F;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
 
     .group-lbl {
-      font-size: 6px;
+      font-size: 8px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: #8A6A2A;
-      margin: 6px 0 3px;
+      margin: 12px 0 6px;
     }
 
     /* ── ITEM ── */
@@ -133,9 +131,9 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      padding: 2.5px 0;
+      padding: 10px 0;
       border-bottom: 1px solid #1E1C18;
-      gap: 5px;
+      gap: 8px;
     }
 
     .item:last-child { border-bottom: none; }
@@ -143,22 +141,22 @@
     .item__left { flex: 1; min-width: 0; }
 
     .item__name {
-      font-size: 7.5px;
+      font-size: 10px;
       color: #F0EAE0;
       font-weight: 400;
-      line-height: 1.25;
+      line-height: 1.3;
     }
 
     .item__desc {
-      font-size: 6px;
+      font-size: 8px;
       color: #9C9488;
       font-weight: 300;
-      line-height: 1.25;
-      margin-top: 1px;
+      line-height: 1.3;
+      margin-top: 2px;
     }
 
     .item__price {
-      font-size: 7px;
+      font-size: 9px;
       color: #C9A84C;
       white-space: nowrap;
       flex-shrink: 0;
@@ -167,13 +165,13 @@
     /* ── FOOTER ── */
     .ftr {
       text-align: center;
-      font-size: 6px;
+      font-size: 8px;
       color: #5C574F;
       letter-spacing: 0.12em;
-      padding-top: 7px;
+      padding-top: 10px;
       border-top: 1px solid #1E1C18;
       flex-shrink: 0;
-      margin-top: 8px;
+      margin-top: 14px;
     }
 
   </style>
@@ -181,14 +179,12 @@
 <body>
 <div class="page">
 
-  <!-- HEADER -->
   <header class="hdr">
     <img src="assets/images/logo-transparent.png" alt="Beirut Lounge">
     <div class="hdr__name">Beirut Lounge</div>
     <div class="hdr__sub">Shisha Bar &middot; Kleikstraße 24, Herzogenrath &middot; Since 2012</div>
   </header>
 
-  <!-- 3 SPALTEN -->
   <div class="cols">
 
     <!-- ── SPALTE 1: SHISHA ── -->
@@ -212,6 +208,7 @@
         <div class="item"><div class="item__left"><div class="item__name">Falim Red</div><div class="item__desc">Falim-Kaugummi &middot; Beerig &middot; Leicht herb</div></div><div class="item__price">€ 14</div></div>
         <div class="item"><div class="item__left"><div class="item__name">Vampire Night</div><div class="item__desc">Blutorange &middot; Grapefruit &middot; Süß-säuerlich</div></div><div class="item__price">€ 14</div></div>
         <div class="item"><div class="item__left"><div class="item__name">Black Box</div><div class="item__desc">Açaí &middot; Guarana &middot; Zitrone</div></div><div class="item__price">€ 14</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Purple Passion</div><div class="item__desc">Al Fakher &middot; Süßer dunkler Beerenmix &middot; Frische Kick</div></div><div class="item__price">€ 14</div></div>
         <div class="item"><div class="item__left"><div class="item__name">Shisha Wechselkopf</div></div><div class="item__price">€ 10</div></div>
       </div>
     </div>
@@ -231,6 +228,7 @@
         <div class="item"><div class="item__left"><div class="item__name">Stilles Wasser &middot; 0,3 l</div></div><div class="item__price">€ 3</div></div>
         <div class="item"><div class="item__left"><div class="item__name">Mineralwasser &middot; 0,3 l</div></div><div class="item__price">€ 3</div></div>
         <div class="item"><div class="item__left"><div class="item__name">Moloko</div><div class="item__desc">Verschiedene Sorten &middot; 0,2 l</div></div><div class="item__price">€ 3,50</div></div>
+        <div class="item"><div class="item__left"><div class="item__name">Moloko Minze</div><div class="item__desc">Frische Minze &middot; Limette &middot; Eiswürfel</div></div><div class="item__price">€ 4,50</div></div>
         <div class="item"><div class="item__left"><div class="item__name">Red Bull</div><div class="item__desc">Verschiedene Sorten &middot; 0,2 l</div></div><div class="item__price">€ 3,50</div></div>
         <div class="item"><div class="item__left"><div class="item__name">Eiskaffee &middot; 0,4 l</div></div><div class="item__price">€ 5</div></div>
         <div class="item"><div class="item__left"><div class="item__name">Kiba</div><div class="item__desc">Kirsch &amp; Banane</div></div><div class="item__price">€ 5</div></div>
@@ -280,7 +278,6 @@
 
   </div>
 
-  <!-- FOOTER -->
   <footer class="ftr">
     Kleikstraße 24 &middot; 52134 Herzogenrath &middot; 01575 5843854 &middot; Ab 19:00 Uhr geöffnet
   </footer>
