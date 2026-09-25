@@ -85,7 +85,7 @@ In `index.html` nach `Öffnungszeiten` suchen — die Zeiten stehen in der Tabel
 Die Nummer kommt in beiden Dateien vor. In `index.html` und `menu.html` nach `01575` suchen und beide Stellen ändern:
 
 ```html
-<a href="tel:+4915758843854">01575 5843854</a>
+<a href="tel:+4915755843854">01575 5843854</a>
 ```
 
 Beide Teile ändern: die Nummer im `href` (ohne Leerzeichen, mit +49) und den sichtbaren Text.
